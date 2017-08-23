@@ -1,0 +1,139 @@
+.navbar{
+  margin-bottom: 0px;
+}
+.hode {
+  margin-top: 0px;
+  height: 400px;
+  background-color: black;
+  background: url('pics/skarnsundbrua.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.hode h1{
+  margin-top: 200px;
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  top: 50%;
+  vertical-align: middle;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   .hode h1{ 
+      margin-top: 130px;
+      font-size: 50px; 
+   }
+   .hode{
+    height: 250px;
+   }
+
+}
+.kropp {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  max-width: 1200px;
+
+}
+.kropp:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.card img{
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+
+}
+.card img:hover{
+  opacity: 0.7;
+}
+
+}
+.card{
+  padding: 10px 10px 10px 10px;
+}
+
+
+html, body{
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+footer{
+  background-color: gray;
+  height: 100px;
+  position: static;
+  bottom:0;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+/* The Modal (background) */
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  position: absolute;
+  margin: auto;
+  display: block;
+  vertical-align: center;
+  width: 80%;
+  max-width: 1000px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption-tekst {
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 15%;
+  height: 150px;
+}
+/* The Close Button */
+.closer {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.closer:hover,
+.closer:focus {
+    color: white;
+    opacity:0.7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

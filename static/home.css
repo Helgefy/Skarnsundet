@@ -1,0 +1,109 @@
+.navbar{
+  margin-bottom: 0px;
+}
+.hode {
+  margin-top: 0px;
+  height: 400px;
+  background-color: black;
+  background: url('pics/skarnsundbrua.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.hode h1{
+  margin-top: 200px;
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  top: 50%;
+  vertical-align: middle;
+
+
+}
+html, body{
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+   .hode h1{ 
+      margin-top: 130px;
+      font-size: 50px; 
+   }
+   .hode{
+    height: 250px;
+   }
+
+}
+.kropp {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  max-width: 1200px;
+
+
+}
+.kropp:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.bokser {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.forskning {
+  background: url('pics/skarnsundbrua.jpg') no-repeat center center; 
+  height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  padding:1px 20px;
+}
+
+.forskning:hover{
+  box-shadow: 0 0 4px 4px gray;
+}
+.post-content {
+    max-height: 100%;
+}
+@media only screen and (max-width: 400px){
+
+  .post-content{
+    top:0px;
+    font-size: 12px;
+  }
+  .post-content h1{
+    font-size:25px;
+  }
+
+}
+.post-content h1{
+  text-align: center;
+}
+.col-md-6{
+  margin-top: 30px;
+  height: 200px;
+
+}
+.col-md-6 a{
+  width: 100%;
+  height: 100%;
+  color:white;
+}
+.col-md-6 a:hover{
+  text-decoration:none;
+  color:white;
+}
+
+
+footer{
+  background-color: gray;
+  height: 100px;
+  position: static;
+  bottom:0;
+  padding-top: 20px;
+  margin-top: 20px;
+}
