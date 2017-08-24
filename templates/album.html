@@ -30,7 +30,7 @@
       </div><!--/container fluid-->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" id="#bs-example-navbar-collapse-1">
-          <li><a href="..">Hjem</a></li>
+          <li><a href="..   ">Hjem</a></li>
           <li><a href="#">Forskning</a></li>
           <li><a href="#">Under vann</a></li>
           <li class="active"><a href="#">Album</a></li>
@@ -44,66 +44,12 @@
   </div>
   <div class="kropp">
     <div class="col-md-4">
-      <ul>
-        <li><a href="#album1">Album 1</a></li>
-        <li><a href="#album2">Album 2</a></li>
-        <li><a href="#album3">Album 3</a></li>
-        <li><a href="#album4">Album 4</a></li>
-        <li><a href="#album5">Album 5</a></li>
-        <li><a href="#album6">Album 6</a></li>
+      <ul id="albumList"><!-- javascript adds li-->
       </ul>
     </div>
     <div class="col-md-8 container-fluid">
-      <div class="row">
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde" alt="Skarnsundbrua">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div>
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div>
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div> 
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div> 
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div> 
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div> 
-        <div class="card col-md-4 col-sm-4 col-lg-4">
-          <img class="img-responsive img-thumbnail alBilde" src="{{ url_for('static', filename ='pics/skarnsundbrua.jpg') }}" id="alBilde">
-
-          <p class="card-text">
-            Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:
-          </p>
-        </div> 
+      <div class="row bilder">
+         
       </div> <!--/row-->
     </div>
 
