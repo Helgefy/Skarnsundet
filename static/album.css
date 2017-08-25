@@ -81,7 +81,7 @@ footer{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 0px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -95,6 +95,7 @@ footer{
 .modal-content {
   position: absolute;
   margin: auto;
+  margin-top: 100px;
   display: block;
   vertical-align: middle;
   width: 80%;
@@ -115,21 +116,46 @@ footer{
 /* The Close Button */
 .closer {
     position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    text-decoration: none;
+    float: right;
     font-size: 70px;
-    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: white;
+    opacity: 0.8;
 }
 
 .closer:hover,
 .closer:focus {
     color: white;
-    opacity:0.7;
+    opacity:0.5;
     text-decoration: none;
     cursor: pointer;
 }
+
+/*Knapp for å velge neste/forige bilde*/
+.velger{
+  font-size: 100px;
+  margin-top: 50px;
+  color: white;
+  opacity: 0.8;
+}
+.velger:hover,
+.velger:focus {
+    color: white;
+    opacity:0.5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.glyphicon-menu-left{
+  float: left;
+  margin-left: 30px;
+}
+.glyphicon-menu-right{
+  float: right;
+  margin-right: 30px;
+}
+
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){

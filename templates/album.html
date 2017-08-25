@@ -44,7 +44,7 @@
   </div>
   <div class="kropp">
     <div class="col-md-4">
-      <ul id="albumList"><!-- javascript adds li-->
+      <ul id="albumList" class="list-group"><!-- javascript adds li-->
       </ul>
     </div>
     <div class="col-md-8 container-fluid">
@@ -55,17 +55,21 @@
 
   </div><!--/kropp-->
 
-    <!-- Modal for å vise bilder i full skjerm  -->
-    <div id="myModal" class="modal1">
+  <!-- Modal for å vise bilder i full skjerm  -->
+  <div id="myModal" class="modal1">
 
     <!-- The Close Button -->
-    <span class="closer" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+    <span class="closer glyphicon glyphicon-remove"></span>
 
     <!-- Modal Content (The Image) -->
     <img class="modal-content" id="img01">
 
     <!-- Modal Caption (Image Text) -->
     <div id="caption-tekst"></div>
+    <div class="row">
+      <span class="glyphicon glyphicon-menu-left velger" id="venstre"></span>
+      <span class="glyphicon glyphicon-menu-right velger" id="hoyre"></span>
+    </div><!--Row-->
   </div><!--/myModal-->
 
   <footer class="footer">

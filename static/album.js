@@ -31,7 +31,7 @@
     var makeAlbList = function(albumer){
       var album
       for (album in albumer){
-        $albumList.append('<li><a href="#'+ albumer[album] + '" class="albumKnapp" >' + albumer[album] + ' </a></li>');
+        $albumList.append('<a href="#'+ albumer[album] + '" class="albumKnapp list-group-item" >' + albumer[album] + ' </a>');
       }
     }
     // Getting images in album
@@ -55,7 +55,7 @@
     var makeImgs = function(imgs, album){
       var img;
       for (img in imgs){
-        $bilder.append( '<div class="card col-md-4"> <img class="img-responsive img-thumbnail alBilde" src="static/Album/' + album +'/'+ imgs[img] + '" id="alBilde" alt="' + img + '"><p class="card-text">Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:</p></div>');
+        $bilder.append( '<div class="card col-md-4"> <img class="img-responsive img-thumbnail alBilde" src="static/Album/' + album +'/'+ imgs[img] + '" id="alBilde" alt="' + imgs[img] + '"><p class="card-text">Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:</p></div>');
       }
     }
     
@@ -66,6 +66,42 @@
     });
 
 
+    // Change picture
+    var $hoyre = $('#hoyre');
+    var $venstre = $('#venstre');
+
+    $hoyre.click(function(){
+      let $alBilder =$('.alBilde');
+      let index = $alBilder.index($clickedImg);
+      if (index === $alBilder.length - 1){
+        $modalImg.attr('src', $alBilder[0].src);
+        $caption.text($alBilder[0].alt);
+        $clickedImg = $alBilder[0]
+      }
+      else{
+        $modalImg.attr('src', $alBilder[index + 1].src);
+        $caption.text($alBilder[index + 1].alt);
+        $clickedImg = $alBilder[index + 1]
+      }
+
+    });
+    $venstre.click(function(){
+      let $alBilder =$('.alBilde');
+      let index = $alBilder.index($clickedImg);
+      let len = $alBilder.length - 1;
+      if (index === 0){
+        $modalImg.attr('src', $alBilder[len].src);
+        $caption.text($alBilder[len].alt);
+        $clickedImg = $alBilder[len]
+      }
+      else{
+        $modalImg.attr('src', $alBilder[index - 1].src);
+        $caption.text($alBilder[index - 1].alt);
+        $clickedImg = $alBilder[index - 1]
+      }
+
+    });
+
 
 
     // Open the modal
@@ -73,15 +109,15 @@
     var $navbar = $('.navbar');
     var $modalImg = $('#img01');
     var $caption = $('#caption-tekst');
-    var clickedImg;
+    var $clickedImg;
 
      // Åpner modal når den blir klikket
     $bilder.delegate('.alBilde','click',function(){
-        clickedImg = $(this)[0];
+        $clickedImg = $(this)[0];
         $modal.css('display', 'block');
         $navbar.css('display', 'none');
-        $modalImg.attr('src', clickedImg.src);
-        $caption.text(clickedImg.alt);
+        $modalImg.attr('src', $clickedImg.src);
+        $caption.text($clickedImg.alt);
     });
     // Lukker modal
     var $span = $('.closer')
