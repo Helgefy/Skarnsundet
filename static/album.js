@@ -31,7 +31,7 @@
     var makeAlbList = function(albumer){
       var album
       for (album in albumer){
-        $albumList.append('<a href="#'+ albumer[album] + '" class="albumKnapp list-group-item" >' + albumer[album] + ' </a>');
+        $albumList.append('<a href="#'+ albumer[album][0] + '" class="albumKnapp list-group-item" >' + albumer[album][0] + ' (' + albumer[album][1]+') </a>');
       }
     }
     // Getting images in album
@@ -55,7 +55,7 @@
     var makeImgs = function(imgs, album){
       var img;
       for (img in imgs){
-        $bilder.append( '<div class="card col-md-4"> <img class="img-responsive img-thumbnail alBilde" src="static/Album/' + album +'/'+ imgs[img] + '" id="alBilde" alt="' + imgs[img] + '"><p class="card-text">Her står en beskrivelse til bildet som er over. Teksten kan være ok lang:</p></div>');
+        $bilder.append( '<div class="card col-md-4"> <img class="img-responsive img-thumbnail alBilde" src="static/Album/' + album +'/'+ imgs[img][1] + '" id="alBilde" alt="' + imgs[img][0] + '"><p class="card-text">'+ imgs[img][2]+'</p></div>');
       }
     }
     
